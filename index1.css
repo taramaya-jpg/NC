@@ -1,0 +1,332 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-image: url('bg1.jpg');
+    background-size: cover; /* Ensure the image covers the entire page */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Make the background fixed during scrolling */
+    color: #e7e4e4;
+    font-family: Arial, sans-serif;
+}
+
+/* Header and Navigation */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo img {
+    padding: 1rem 0;
+    width: 120px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #318ddd;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+/* General Styles for the Home Section */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    height: 100vh; /* Full screen height */
+}
+
+.left {
+    flex: 1;
+    background-color: #0e0e0e; /* Green background */
+    color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.left-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.left-content p {
+    font-size: 1.2em;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.right {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.right .top {
+    font-size: 1.4em;
+    color: #fffdfd;
+    margin-bottom: 20px;
+}
+
+.right .cta-link {
+    color: #fef9f9;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.right .cta-link:hover {
+    color: #218838;
+}
+
+.bottom {
+    margin-top: 30px;
+}
+
+.cta-button {
+    background-color: #0a0a0a; /* Green background */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #218838; /* Darker green when hovered */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left, .right {
+        flex: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .left {
+        margin-bottom: 30px; /* Add margin to separate left section */
+    }
+
+    .bottom .cta-button {
+        width: 100%; /* Make button full width on smaller screens */
+    }
+
+    .right .top {
+        font-size: 1.2em; /* Smaller font for mobile */
+    }
+
+    .left-content h2 {
+        font-size: 2em;
+    }
+}
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    padding-top: 0%;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f7efef;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.testimonial-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-item p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.testimonial-item .customer-name {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #333;
+}
+
+/* Hover Effect for Testimonials */
+.testimonial-item:hover {
+    transform: scale(1.05);
+}
+
+/* Carousel Controls */
+.carousel-controls {
+    margin-top: 20px;
+}
+
+.carousel-controls button {
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    color: #e9e3e3;
+    cursor: pointer;
+}
+
+.carousel-controls button:hover {
+    color: #28a745;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+    .testimonials h2 {
+        font-size: 1.5rem; /* Smaller font size for h2 */
+    }
+
+    .testimonial-container {
+        flex-direction: column; /* Stack testimonials vertically */
+        gap: 15px; /* Reduced gap */
+    }
+
+    .testimonial-item {
+        width: 90%; /* Make each testimonial item take up most of the width */
+        max-width: 350px; /* Limit the max width */
+        margin: 0 auto; /* Center the items */
+    }
+
+    .carousel-controls button {
+        font-size: 1.5em; /* Adjust button size for mobile */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .testimonials h2 {
+        font-size: 1.2rem; /* Even smaller for smaller screens */
+    }
+
+    .testimonial-container {
+        gap: 10px; /* Even smaller gap */
+    }
+
+    .testimonial-item {
+        width: 100%; /* Full width for very small screens */
+        max-width: none; /* No max width */
+    }
+
+    .carousel-controls button {
+        font-size: 1.2em; /* Adjust button size for very small screens */
+    }
+}
+
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 2rem 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+}
+
+.footer-container p,
+.footer-container a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-container a:hover {
+    color: #318ddd;
+}
+
+.footer-menu {
+    list-style: none;
+}
+
+.footer-menu li {
+    margin-top: 10px;
+}
+
+.footer-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 1rem 0;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

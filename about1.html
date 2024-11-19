@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N C</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="about1.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home" class="logo">
+                <img src="logo1.png" alt="Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Back to Main</a></li>
+                <li><a href="index1.html" class="link">Home</a></li>
+                <li><a href="about1.html" class="link">About us</a></li>
+                <li><a href="mennu1.html" class="link">Menu</a></li>
+                <li><a href="gallery1.html" class="link">Gallery</a></li>
+                <li><a href="booking1.html" class="link">Bookings</a></li>
+                <li><a href="contact1.html" class="link">Contact</a></li>
+            </ul>
+            <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+</header>
+
+<!--* about us*/-->
+<section class="about" id="about">
+    <div class="about-container">
+        
+        <!-- Image on the Right -->
+        <div class="about-image">
+            <img src="nc1.png" alt="N.C Image">
+        </div>
+        <!-- Text Content -->
+        <div class="about-text-box">
+            <div class="title">
+                <p>ABOUT <span>N.C</span></p>
+            </div>
+            <p class="des">
+                
+NC Restaurant is a cozy and vibrant dining destination that combines exquisite flavors with a welcoming ambiance. Known for its diverse menu, NC Restaurant serves a delightful array of cuisines, carefully crafted to cater to every palate. Whether you're craving hearty comfort food, fresh and healthy options, or indulgent desserts, NC Restaurant promises a memorable culinary experience. With its friendly staff, elegant decor, and a commitment to quality, 
+it’s the perfect spot for casual dining, family gatherings, or special celebrations. At NC Restaurant, every meal is a celebration of taste and warmth.
+            </p>
+            <a href="#">Visit or Book <span>Now</span></a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <p> <a href="mailto:Bookabite@gmail.com" style="color: #318ddd;">Bookabite@gmail.com</a></p>
+            <p>Address: Sherubtse, Kanglung</p>
+        </div>
+        <div class="footer-center">
+            <ul class="footer-menu">
+                <li><a href="#">Privacy Policy & Terms of Service</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <p>Follow us: 
+                <a href="#">Facebook</a> | 
+                <a href="#">Instagram</a>
+            </p>
+        </div>
+    </div>
+</footer>
+<script src=""></script>
+<script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    }
+    </script>
+</body>
+</head> 
+</html>   

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N C</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index1.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home" class="logo">
+                <img src="logo1.png" alt="Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Back to Main</a></li>
+                <li><a href="index1.html" class="link">Home</a></li>
+                <li><a href="about1.html" class="link">About us</a></li>
+                <li><a href="mennu1.html" class="link">Menu</a></li>
+                <li><a href="gallery1.html" class="link">Gallery</a></li>
+                <li><a href="booking1.html" class="link">Bookings</a></li>
+                <li><a href="contact1.html" class="link">Contact</a></li>
+            </ul>
+            <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+</header>
+
+<section id="home" class="home">
+    <!-- Left Section with Background Color or Content -->
+    <div class="left">
+        <div class="left-content">
+            <h2>Welcome to Our Restaurant</h2>
+            <p>Experience the taste of freshly made dishes from our exclusive menu!</p>
+        </div>
+    </div>
+
+    <!-- Right Section with Textual Content -->
+    <div class="right">
+        <!-- Top Section with Tagline and Link -->
+        <div class="top">
+            <p>Start your meal with our exclusive menu</p>
+            <a href="menu1.html" class="cta-link">Learn more...</a>
+        </div>
+
+        <!-- Bottom Section with Button -->
+        <div class="bottom">
+            <button class="cta-button">Book Now</button>
+        </div>
+    </div>
+</section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial-item">
+                <p>"The food here is absolutely amazing! I love the variety of dishes."</p>
+                <p class="customer-name">- John Doe</p>
+            </div>
+            <div class="testimonial-item">
+                <p>"A wonderful dining experience. The ambiance and service were top-notch."</p>
+                <p class="customer-name">- Jane Smith</p>
+            </div>
+            <div class="testimonial-item">
+                <p>"Best meal I’ve had in years. Highly recommend the momo!"</p>
+                <p class="customer-name">- Mike Johnson</p>
+            </div>
+        </div>
+        <!-- Optional: Carousel navigation buttons -->
+        <div class="carousel-controls">
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p> <a href="mailto:Bookabite@gmail.com" style="color: #318ddd;">Bookabite@gmail.com</a></p>
+                <p>Address: Sherubtse, Kanglung</p>
+            </div>
+            <div class="footer-center">
+                <ul class="footer-menu">
+                    <li><a href="#">Privacy Policy & Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <p>Follow us: 
+                    <a href="#">Facebook</a> | 
+                    <a href="#">Instagram</a>
+                </p>
+            </div>
+        </div>
+    
+    </footer>
+    <script src="index1.js"></script>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        }
+        </script>
+    </body>
+    </head> 
+    </html>   
+</body>
+</html>

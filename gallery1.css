@@ -1,0 +1,239 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-image: url('bg1.jpg');
+    background-size: cover; /* Ensure the image covers the entire page */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Make the background fixed during scrolling */
+    color: #e7e4e4;
+    font-family: Arial, sans-serif;
+}
+
+/* Header and Navigation */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo img {
+    padding: 1rem 0;
+    width: 120px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #318ddd;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+
+/* Base Styles */
+.gallery {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.gallery-title h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    font-style: italic;
+}
+
+.gallery-title p {
+    font-size: 1em;
+    color: #f5f4f4;
+    font-size: 24px;
+    margin-bottom: 1em;
+}
+
+/* Grid Layout */
+.gallery-content {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.gallery-item {
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    color: black;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    animation: changeColor 9s infinite; /* Animation to cycle colors */
+}
+
+.item-img-circle {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+@keyframes changeColor {
+    0% { background-color: #ff9999; }   /* Light Red */
+    16% { background-color: #ffcc99; }  /* Light Orange */
+    33% { background-color: #ffff99; }  /* Light Yellow */
+    50% { background-color: #99ff99; }  /* Light Green */
+    66% { background-color: #99ccff; }  /* Light Blue */
+    83% { background-color: #cc99ff; }  /* Light Purple */
+    100% { background-color: #ff9999; } /* Return to Light Red */
+}
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .gallery-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-title h2 {
+        font-size: 1.5em;
+    }
+
+    .gallery-title p {
+        font-size: 0.9em;
+    }
+    
+    .gallery-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .gallery-item {
+        padding: 10px;
+    }
+
+    .item-img-circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .item-desc {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-title h2 {
+        font-size: 1.2em;
+    }
+
+    .gallery-title p {
+        font-size: 0.8em;
+    }
+    
+    .gallery-content {
+        grid-template-columns: 1fr;
+    }
+
+    .item-img-circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .item-desc {
+        font-size: 0.8em;
+    }
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 2rem 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+}
+
+.footer-container p,
+.footer-container a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-container a:hover {
+    color: #318ddd;
+}
+
+.footer-menu {
+    list-style: none;
+}
+
+.footer-menu li {
+    margin-top: 10px;
+}
+
+.footer-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 1rem 0;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
